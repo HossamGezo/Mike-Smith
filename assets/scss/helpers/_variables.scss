@@ -1,0 +1,10 @@
+$color-breakpoints: (
+  primary-color: #272727,
+  secondary-color: #ff652f,
+);
+$media-breakpoints: (
+  sm: "(max-width: 767px)",
+  md: "(min-width: 768px)",
+  lg: "(min-width: 991px)",
+  xl: "(min-width: 1200px)",
+);

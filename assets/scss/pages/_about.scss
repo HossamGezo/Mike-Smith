@@ -1,0 +1,79 @@
+// Import Helpers Directory Contents
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+  About Page Section
+------------------------------
+*/
+.about {
+  &__bio-image {
+    height: 50vh;
+    width: 100%;
+    background: 
+    linear-gradient(
+      to right,
+      rgba(color(primary-color), 0.9),
+      rgba(color(primary-color), 0.3)
+    ),
+    url(../images/model-1.jpg) center top;
+    background-size: cover;
+    @include flex(column, null, flex-end, center, 20px);
+    text-align: justify;
+    &-title {
+      color: color(secondary-color);
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    &-desc {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.3;
+      padding: 0 10px;
+      letter-spacing: 1.5px;
+      @include media (md) {
+        width: 600px;
+        margin: 0 auto 40px;
+        font-size: 1.2rem;
+      }
+      @include media (lg) {
+        width: 800px;
+      }
+    }
+  }
+  .jobs {
+    padding: 30px 0;
+    background-color: color(primary-color);
+    @include flex(column, null, center, center, 10px);
+    &__job {
+      width: 75%;
+      margin: 0 auto 30px;
+      border-bottom: 5px solid color(secondary-color);
+      padding: 10px;
+      color: white;
+      background-color: lighten(color(primary-color), 10%);
+      &-year {
+        color: color(secondary-color);
+      }
+      &-year, &-company, &-position {
+        margin-bottom: 0.6rem;
+      }
+      &-desc {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+footer {
+  .social-icons.about {
+    @include flex(column, null, center, space-between, 10px);
+  }
+  .copyright.about {
+    transform: rotate(90deg) translate(-0.6rem, -3.5rem);
+    span {
+      display: inline-block;
+      margin: 0 0 5px 0;
+    }
+  }
+}

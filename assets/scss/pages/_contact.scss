@@ -1,0 +1,39 @@
+// Import Helpers Directory Contents
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+  Contact Page Section
+------------------------------
+*/
+.contact {
+  text-align: center;
+  text-transform: capitalize;
+  height: 100%;
+  background: 
+    linear-gradient(
+      to right,
+      rgba(color(primary-color), 0.9),
+      rgba(color(primary-color), 0.3),
+    ),
+  url(../images/model-1.jpg) center top;
+  background-size: cover;
+  @include flex(null, null, center, center, null);
+  color: white;
+  text-align: left;
+  &__me {
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    &--email,
+    &--phone,
+    &--address {
+      font-size: 1.5rem;
+      p {
+        margin-top: 0.4rem;
+        color: color(secondary-color);
+      }
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+// Import Helpers Directory Contents
+@use "variables" as *;
+// ---------------------------------
+@function color($color) {
+  @return map-get($color-breakpoints, $color);
+}

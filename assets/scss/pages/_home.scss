@@ -1,0 +1,51 @@
+// Import Helpers Directory Contents
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+  Home Page Section
+------------------------------
+*/
+.main {
+  width: 100%;
+  height: 100%;
+  .home {
+    text-align: center;
+    text-transform: capitalize;
+    height: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba(color(primary-color), 0.9),
+        rgba(color(primary-color), 0.3),
+      ),
+    url(../images/model-1.jpg) center top;
+    background-size: cover;
+    @include flex(column, null, center, center, null);
+    color: white;
+    .name {
+      width: 100%;
+      border-bottom: 2px solid white;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      h2 {
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+      }
+      .home__name {
+        font-size: 4.5rem;
+        text-align: center;
+        &--last {
+          display: block;
+          @include media (md) {
+            display: inline-block;
+          }
+          color: color(secondary-color);
+          font-weight: 700;
+        }
+      }
+    }
+    .home__skills {
+      font-size: 20px;
+    }
+  }
+}

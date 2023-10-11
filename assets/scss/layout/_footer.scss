@@ -1,0 +1,30 @@
+// Import Helpers Directory Contnets
+@use "../helpers/usinghelpers" as *;
+/*
+------------------------------
+  Footer Section
+------------------------------
+*/
+.footer {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  @include flex(null, null, space-between, center, null);
+  .social-icons {
+    a {
+      color: white;
+      .icon {
+        @include transition-ease;
+        margin-right: 4px; 
+        &:hover {
+          color: color(secondary-color);
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 0.95rem;
+  }
+}
